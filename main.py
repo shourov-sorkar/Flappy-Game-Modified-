@@ -6,6 +6,9 @@ pygame.init()
 
 SCREEN = pygame.display.set_mode((1000, 1000))  # Setting the display
 
+# Add Display Caption 
+pygame.display.set_caption("Flappy Birdgame By Shourov")
+
 # background
 BACKGROUND_IMAGE = pygame.image.load('background.jpg')
 
