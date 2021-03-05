@@ -18,18 +18,23 @@ bird_y_change = 0
 def display_bird(x, y):
     SCREEN.blit(BIRD_IMAGE, (x, y))
 
+# Define some colors
+BLACK = (0, 0, 0)
+WHITE = (255, 255, 255)
+BLUE = (0, 0, 255)
+GREEN = (0, 255, 0)
+RED = (255, 0, 0)
+
 # OBSTACLES
 OBSTACLE_WIDTH = 70
 OBSTACLE_HEIGHT = random.randint(150,450)
-OBSTACLE_COLOR = (35, 7, 77, 0.6)
-
 OBSTACE_X_CHANGE = -2
 obstacle_x = 500
 
 def display_obstacle(height):
-    pygame.draw.rect(SCREEN, OBSTACLE_COLOR,(obstacle_x, 0, OBSTACLE_WIDTH, height))
+    pygame.draw.rect(SCREEN, (random.randint(0,255),random.randint(0,255),random.randint(0,255)),(obstacle_x, 0, OBSTACLE_WIDTH, height))
     bottom_obstacle_height = 635 - height - 100
-    pygame.draw.rect(SCREEN, OBSTACLE_COLOR, (obstacle_x, 635, OBSTACLE_WIDTH, -bottom_obstacle_height))
+    pygame.draw.rect(SCREEN, (random.randint(0,255),random.randint(0,255),random.randint(0,255)), (obstacle_x, 635, OBSTACLE_WIDTH, -bottom_obstacle_height))
 
 # COLLISION DETECTION
 def collision_detection (obstacle_x, obstacle_height, bird_y, bottom_obstacle_height):
