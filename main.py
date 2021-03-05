@@ -163,6 +163,8 @@ while running:
     # Generating Random string 
     # list = ["Great", "WOW", "Wonderful","Awesome"]			# List
     # item = random.choice(list)
+    # generating sound 
+    point_sound = pygame.mixer.Sound("swoosh.wav")
 
     # generating new obstacles
     if obstacle_x <= -10:
@@ -172,6 +174,7 @@ while running:
         # SCREEN.blit(display5, (650, 200))
         # paused = True
         # pygame.time.set_timer(pausetimerevent, 5000) # 5000 milliseconds = 5 socond 
+        pygame.mixer.Sound.play(point_sound)
         score += 1
 
     # displaying the obstacle
